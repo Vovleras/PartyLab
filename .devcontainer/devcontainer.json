@@ -10,5 +10,5 @@
     }
   },
   "postCreateCommand": "curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash",
-  "postStartCommand": "k3d cluster create dev --agents 3 --wait || true"
+  "postStartCommand": "bash -c 'echo Eliminando cluster previo... && k3d cluster delete party || true && echo Creando nuevo cluster... && k3d cluster create party --servers 1 --agents 0 && echo Esperando a que el servidor este listo... && sleep 10 && echo Creando nodos personalizados... && k3d node create --role agent --name nodo-reggaeton --cluster party && k3d node create --role agent --name nodo-rock --cluster party && k3d node create --role agent --name nodo-tecno --cluster party && k3d node create --role agent --name nodo-salsa --cluster party && echo Verificando nodos... && kubectl get nodes'"
 }
