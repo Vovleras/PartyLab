@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rock-prog
+  namespace: rock
+spec:
+  containers:
+    - name: Angie
+      image: nginx
+  tolerations:
+    - key: "music"
+      operator: "Equal"
+      value: "bass-boost"
+      effect: "NoSchedule"
