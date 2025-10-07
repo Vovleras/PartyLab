@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: techno-activa
+  namespace: techno
+spec:
+  containers:
+    - name: techno-cumbia
+      image: nginx
+  tolerations:
+    - key: "music"
+      operator: "Equal"
+      value: "bass-boost"
+      effect: "NoSchedule"
