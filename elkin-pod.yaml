@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: oyente-salsero
+  namespace: salsa
+  labels:
+    app: salsa
+  annotations:
+    author: "Elkin Angulo"
+    music-preference: |
+      Me gusta la salsa que cuenta relatos, la salsa romántica 
+      y especialmente aquella que combina ambas. 
+      También escucho reggaetón de vez en cuando.
+spec:
+  containers:
+    - name: oyente-salsero
+      image: nginx
+      ports:
+        - containerPort: 80
+  tolerations:
+    - key: "music"
+      operator: "Equal"
+      value: "sabor-latino"
+      effect: "NoSchedule"
+    - key: "music"
+      operator: "Equal"
+      value: "perreo-intenso"
+      effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - latino
