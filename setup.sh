@@ -7,7 +7,7 @@ kubectl create namespace rock || true
 kubectl create namespace techno || true
 kubectl create namespace salsa || true
 
-echo "🎸 Etiquetando y aplicando taints a los nodos..."
+echo "Etiquetando y aplicando taints a los nodos..."
 kubectl label nodes k3d-nodo-reggaeton-0 style=urbano --overwrite
 kubectl taint nodes k3d-nodo-reggaeton-0 music=perreo-intenso:NoSchedule --overwrite
 kubectl label nodes k3d-nodo-rock-0 style=metalero --overwrite
