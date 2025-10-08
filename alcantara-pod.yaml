@@ -1,22 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-spirit
+  name: technofull
   namespace: techno
-  labels:
-    app: cultura-techno
   annotations:
-    author: "Andrés Felipe Alcántara Muñoz"
-    passion: |
-      Apasionado por el poder del techno y la house music: un ritmo hipnótico con bajos profundos.
-      Al mismo tiempo, vivo la pasión por la cultura automotriz japonesa (JDM): el arte del tuning, la ingeniería de precisión y el espíritu rebelde de las carreras callejeras.
-      法より速さだ
+    student-name: "Andrés Felipe Alcántara Muñoz"
+    music-preferences: "Techno, House — Ritmos hipnóticos y bajos profundos."
+    extra-passion: "Cultura JDM — tuning, carreras callejeras y 法より速さだ"
 spec:
   containers:
-    - name: techno-spirit
+    - name: jdm-spirit
       image: nginx
-      ports:
-        - containerPort: 80
   tolerations:
     - key: "music"
       operator: "Equal"
