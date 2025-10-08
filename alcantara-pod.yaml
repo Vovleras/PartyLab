@@ -6,7 +6,7 @@ metadata:
   annotations:
     student-name: "Andrés Felipe Alcántara Muñoz"
     music-preferences: "Techno, House — Ritmos hipnóticos y bajos profundos."
-    extra-passion: "Cultura JDM — tuning, carreras callejeras y 法より速さだ"
+    extra-passion: "Cultura JDM — tuning, carreras callejeras y 法より速さだ."
 spec:
   containers:
     - name: jdm-spirit

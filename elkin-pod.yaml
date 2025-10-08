@@ -31,3 +31,4 @@ spec:
                 operator: In
                 values:
                   - latino
+                  
