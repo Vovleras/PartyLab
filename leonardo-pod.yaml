@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: salsa-enjoyer
+  namespace: salsa
+  labels:
+    app: salsa
+  annotations:
+    student-name: "Leonardo Cuadro López"
+    music-preference: "I actually don't have a favorite genre, I like all kind of music"
+spec:
+  containers:
+    - name: salsa-listener
+      image: nginx
+      ports:
+        - containerPort: 80
+  tolerations:
+    - key: "music"
+      operator: "Equal"
+      value: "sabor-latino"
+      effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - latino
