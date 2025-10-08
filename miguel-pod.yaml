@@ -5,7 +5,7 @@ metadata:
   namespace: techno
   annotations:
     student-name: "Miguel Angel Salcedo"
-    music-preferences: "Progressive House, Electro, Trance progresivo suave."
+    music-preferences: "Progressive House, Electro, Trance progresivo suave"
 spec:
   containers:
     - name: loop-machine
