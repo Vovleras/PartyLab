@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-activa
+  name: techno-girly
   namespace: techno
   annotations:
     student: "Victoria Andrea Volveras Parra"
@@ -15,3 +15,12 @@ spec:
       operator: "Equal"
       value: "bass-boost"
       effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - electronico
