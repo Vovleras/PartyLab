@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   name: rock-nativo
   namespace: rock
+  annotations:
+    student: "Sheila Marcela Valencia Chito"
+    music-preferences: "Rock has always been the soundtrack to my favorite moments."
 spec:
   containers:
     - name: rockero
@@ -12,3 +15,12 @@ spec:
       operator: "Equal"
       value: "guitarra-electrica"
       effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - metalero
