@@ -12,7 +12,7 @@ spec:
       image: nginx
   tolerations:
     - key: "music"
-      operator: "Equals"
+      operator: "Equal"
       value: "guitarra-electrica"
       effect: "NoSchedule"
   affinity:
