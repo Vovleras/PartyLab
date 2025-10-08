@@ -1,8 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-activa
+  name: techno-girly
   namespace: techno
+  annotations:
+    student: "Victoria Andrea Volveras Parra"
+    music-preferences: "My music preferences depend on my mood. For each mood, I have favorite artists or songs."
 spec:
   containers:
     - name: techno-cumbia
@@ -12,3 +15,12 @@ spec:
       operator: "Equal"
       value: "bass-boost"
       effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - electronico
