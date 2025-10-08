@@ -19,6 +19,7 @@ kubectl taint nodes k3d-nodo-salsa-0 music=sabor-latino:NoSchedule --overwrite
 
 echo " Aplicando pods..."
 kubectl apply -f victoria-pod.yaml
+kubectl apply -f miguel-pod.yaml
 
 echo " Configuración completa. Verificando..."
 kubectl get pods -A
