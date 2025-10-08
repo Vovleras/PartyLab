@@ -10,5 +10,5 @@ spec:
   tolerations:
     - key: "music"
       operator: "Equal"
-      value: "bass-boost"
+      value: "guitarra-electrica"
       effect: "NoSchedule"
