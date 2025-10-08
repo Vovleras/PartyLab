@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: technofull2
+  namespace: techno
+  annotations:
+    name: "Andres Ortega 2241885"
+    musicpreference: "electronica"
+spec:
+  containers:
+    - name: borisbrejcha
+      image: nginx
+  tolerations:
+  - key: "music"
+    operator: "Equal"
+    value: "bass-boost"
+    effect: "NoSchedule"  
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - electronico
+
