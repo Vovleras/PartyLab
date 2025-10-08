@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-girly
+  name: technofull
   namespace: techno
   annotations:
-    student: "Victoria Andrea Volveras Parra"
-    music-preferences: "My music preferences depend on my mood. For each mood, I have favorite artists or songs."
+    student-name: "Andrés Felipe Alcántara Muñoz"
+    music-preferences: "Techno, House — Ritmos hipnóticos y bajos profundos."
+    extra-passion: "Cultura JDM — tuning, carreras callejeras y 法より速さだ"
 spec:
   containers:
-    - name: techno-cumbia
+    - name: jdm-spirit
       image: nginx
   tolerations:
     - key: "music"

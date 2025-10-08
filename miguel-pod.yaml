@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-girly
+  name: bass-drop
   namespace: techno
   annotations:
-    student: "Victoria Andrea Volveras Parra"
-    music-preferences: "My music preferences depend on my mood. For each mood, I have favorite artists or songs."
+    student-name: "Miguel Angel Salcedo"
+    music-preferences: "Progressive House, Electro, Trance progresivo suave"
 spec:
   containers:
-    - name: techno-cumbia
+    - name: loop-machine
       image: nginx
   tolerations:
     - key: "music"
