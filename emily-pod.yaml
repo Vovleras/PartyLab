@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pop-girly
+  namespace: rock
+  annotations:
+    student: "Emily Nuñez Ordoñez"
+    music-preferences: "I really enjoy listening to indie rock or R&B, but I mostly listen to pop music."
+spec:
+  containers:
+    - name: indie-rock
+      image: nginx
+  tolerations:
+    - key: "music"
+      operator: "Equal"
+      value: "guitarra-electrica"
+      effect: "NoSchedule"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: style
+                operator: In
+                values:
+                  - metalero
