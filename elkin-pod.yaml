@@ -1,19 +1,26 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-girly
-  namespace: techno
+  name: salsa-listener
+  namespace: salsa
+  labels:
+    app: salsa
   annotations:
-    student: "Victoria Andrea Volveras Parra"
-    music-preferences: "My music preferences depend on my mood. For each mood, I have favorite artists or songs."
+    author: "Elkin Angulo"
+    music-preference: |
+      I like salsa music that tells stories. 
+      I also like romantic salsa songs. 
+      My favorite is the one that mixes both styles.
 spec:
   containers:
-    - name: techno-cumbia
+    - name: salsa-listener
       image: nginx
+      ports:
+        - containerPort: 80
   tolerations:
     - key: "music"
       operator: "Equal"
-      value: "bass-boost"
+      value: "sabor-latino"
       effect: "NoSchedule"
   affinity:
     nodeAffinity:
@@ -23,4 +30,4 @@ spec:
               - key: style
                 operator: In
                 values:
-                  - electronico
+                  - latino

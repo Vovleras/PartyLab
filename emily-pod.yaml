@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: techno-girly
-  namespace: techno
+  name: pop-girly
+  namespace: rock
   annotations:
-    student: "Victoria Andrea Volveras Parra"
-    music-preferences: "My music preferences depend on my mood. For each mood, I have favorite artists or songs."
+    student: "Emily Nuñez Ordoñez"
+    music-preferences: "I really enjoy listening to indie rock or R&B, but I mostly listen to pop music."
 spec:
   containers:
-    - name: techno-cumbia
+    - name: indie-rock
       image: nginx
   tolerations:
     - key: "music"
       operator: "Equal"
-      value: "bass-boost"
+      value: "guitarra-electrica"
       effect: "NoSchedule"
   affinity:
     nodeAffinity:
@@ -23,4 +23,4 @@ spec:
               - key: style
                 operator: In
                 values:
-                  - electronico
+                  - metalero
