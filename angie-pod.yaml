@@ -5,7 +5,7 @@ metadata:
   namespace: rock
 spec:
   containers:
-    - name: Angie
+    - name: angie
       image: nginx
   tolerations:
     - key: "music"
