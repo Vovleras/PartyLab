@@ -24,6 +24,7 @@ kubectl apply -f alcantara-pod.yaml
 kubectl apply -f miguel-pod.yaml
 kubectl apply -f salome-pod.yaml
 kubectl apply -f elkin-pod.yaml
+kubectl apply -f emily-pod.yaml
 
 
 echo " Configuración completa. Verificando..."
